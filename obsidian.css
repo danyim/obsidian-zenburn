@@ -34,7 +34,7 @@
     --background-primary:         var(--black-dim);
     --background-primary-alt:     var(--black-dim);
     --background-secondary:       var(--black);
-    --background-secondary-alt:   var(--black-bright);
+    --background-secondary-alt:   var(--black-dim);
     --text-normal:                var(--white-dim);
     --text-faint:                 var(--white-bright);
     --text-muted:                 var(--white);
@@ -45,13 +45,13 @@
     --text-title-h5:              var(--magenta);
     --text-title-h6:              var(--cyan);
     --text-link:                  var(--blue);
-    --text-a:                     var(--magenta);
-    --text-a-hover:               var(--cyan-bright);
+    --text-a:                     var(--red-dim);
+    --text-a-hover:               var(--red-bright);
     --text-mark:                  rgba(136, 192, 208, 0.3); /* frost1 */
     --pre-code:                   var(--black);
     --text-highlight-bg:          var(--green);
     --text-highlight-bg-active:   var(--green);
-    --interactive-accent:         var(--blue);
+    --interactive-accent:         var(--red-dim);
     --interactive-before:         var(--blue-dim);
     --background-modifier-border: var(--black-bright);
     --text-accent:                var(--cyan);
@@ -60,7 +60,7 @@
     --code-block:                 var(--white);
     --vim-cursor:                 var(--cyan);
     --text-selection:             var(--blue-dim);
-    --text-tag:                   var(--white-dim);
+    --text-tag:                   var(--red-dim);
     --task-checkbox:              var(--blue);
     --table-header:               var(--black-dim);
     --table-row-even:             var(--black);

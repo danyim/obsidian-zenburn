@@ -1,8 +1,9 @@
-# Zenburn for Obsidian
+# Obsidian Zenburn
 
 ![](screen.png)
 
-The classic Zenburn vim theme for Obsidian. In dark mode only.
+Zenburn, the classic low-contrast vim theme, now available for Obsidian. Available in dark mode only.
 
-https://kippura.org/zenburnpage/
-https://github.com/jnurmine/Zenburn
+## Installation
+- Options > Appearance > Open Themes Folder
+- Drop the `obsidian.css` in there
