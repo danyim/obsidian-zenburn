@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 :root
 {
@@ -61,7 +62,7 @@
     --vim-cursor:                 var(--cyan);
     --text-selection:             var(--blue-dim);
     --text-tag:                   var(--red-dim);
-    --task-checkbox:              var(--blue);
+    --task-checkbox:              var(--white);
     --table-header:               var(--black-dim);
     --table-row-even:             var(--black);
     --table-row-odd:              var(--black-bright);
@@ -69,7 +70,8 @@
 }
 
 body {
-  --font-text-theme: Segoe UI, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  --font-text-theme: 'Inter Light', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  --font-header-text-theme: 'Inter Medium', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
   --font-monospace-theme: 'Inconsolata', 'Source Code Pro', ui-monospace, monospace;
 }
 
@@ -131,9 +133,9 @@ a:hover,
 
 a.tag, a.tag:hover {
   color: var(--text-tag) !important;
-  background-color: var(--background-secondary-alt);
-  padding: 2px 4px;
-  border-radius: 4px;
+  background-color: var(--black);
+  padding: 3px 8px;
+  border-radius: 10px;
 }
 
 a.tag:hover {
@@ -259,6 +261,12 @@ thead
     padding-top: 0 !important;
 }
 
+.cm-formatting-header {
+    font-family: var(--font-text-theme);
+    color: var(--black-bright) !important;
+    font-weight: 200 !important;
+}
+
 .cm-hashtag-begin
 {
     color: var(--text-tag) !important;
@@ -312,6 +320,13 @@ thead
     border-radius: 5px;
 }
 
+/* Tables */
+pre.HyperMD-table-row.CodeMirror-line > *,
+.cm-hmd-table-sep
+{
+    color: var(--inline-code) !important;
+}
+
 .cm-s-obsidian,
 .cm-inline-code
 {
@@ -320,9 +335,14 @@ thead
 
 .cm-inline-code
 {
-    color: var(--inline-code) !important;
     background-color: var(--pre-code) !important;
-    padding: 4px !important;
+    color: var(--inline-code) !important;
+    padding: 4px 0px !important;
+}
+.cm-formatting-code.cm-inline-code
+{
+    background-color: none !important;
+    padding: 4px 0px !important;
 }
 
 .workspace-leaf-header-title
@@ -421,22 +441,24 @@ h6 a
     color: var(--text-title-h6) !important;
 }
 
-.cm-header {
-    font-weight: 500 !important;
+.cm-header:not(.cm-formatting),
+h1, h2, h3, h4, h5, h6
+{
+    font-family: var(--font-header-text-theme);
+    letter-spacing: -0.03em;
+    font-weight: 800 !important;
 }
 
 .HyperMD-header-1,
 .markdown-preview-section h1
 {
-    font-weight: 500 !important;
-    font-size: 2.2em !important;
+    font-size: 2.4em !important;
     color: var(--text-title-h1) !important;
 }
 
 .HyperMD-header-2,
 .markdown-preview-section h2
 {
-    font-weight: 500 !important;
     font-size: 2.0em !important;
     color: var(--text-title-h2) !important;
 }
@@ -444,7 +466,6 @@ h6 a
 .HyperMD-header-3,
 .markdown-preview-section h3
 {
-    font-weight: 500 !important;
     font-size: 1.8em !important;
     color: var(--text-title-h3) !important;
 }
@@ -452,7 +473,6 @@ h6 a
 .HyperMD-header-4,
 .markdown-preview-section h4
 {
-    font-weight: 500 !important;
     font-size: 1.6em !important;
     color: var(--text-title-h4) !important;
 }
@@ -460,7 +480,6 @@ h6 a
 .HyperMD-header-5,
 .markdown-preview-section h5
 {
-    font-weight: 500 !important;
     font-size: 1.4em !important;
     color: var(--text-title-h5) !important;
 }
@@ -468,7 +487,6 @@ h6 a
 .HyperMD-header-6,
 .markdown-preview-section h6
 {
-    font-weight: 500 !important;
     font-size: 1.2em !important;
     color: var(--text-title-h6) !important;
 }
@@ -515,6 +533,7 @@ input.task-list-item-checkbox {
     border: 1px solid var(--task-checkbox);
     appearance: none;
     -webkit-appearance: none;
+    filter: none;
 }
 
 input.task-list-item-checkbox:checked {
@@ -532,4 +551,11 @@ input.task-list-item-checkbox:checked {
 }
 .setting-item-control input[type="text"]::placeholder {
     color: var(--blue-dim);
+}
+
+/* Collapse/folding indicators */
+.markdown-preview-view .collapse-indicator,
+.CodeMirror-guttermarker-subtle:not(.CodeMirror-foldgutter-folded)
+{
+    color: var(--black) !important;
 }
