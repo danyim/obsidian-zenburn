@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200..600&display=swap');
 
 :root
 {
@@ -69,7 +69,8 @@
     --table-hover:                var(--blue-bright);
 }
 
-body {
+body
+{
   --font-text-theme: 'Inter Light', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
   --font-header-text-theme: 'Inter Medium', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
   --font-monospace-theme: 'Inconsolata', 'Source Code Pro', ui-monospace, monospace;
@@ -131,14 +132,16 @@ a:hover,
     text-decoration: none !important;
 }
 
-a.tag, a.tag:hover {
+a.tag, a.tag:hover
+{
   color: var(--text-tag) !important;
   background-color: var(--black);
   padding: 3px 8px;
   border-radius: 10px;
 }
 
-a.tag:hover {
+a.tag:hover
+{
     text-decoration: underline !important;
 }
 
@@ -147,11 +150,13 @@ mark
     background-color: var(--text-mark);
 }
 
-.titlebar {
+.titlebar
+{
   background-color: var(--background-secondary-alt);
 }
 
-.titlebar-inner {
+.titlebar-inner
+{
   color: var(--text-normal);
 }
 
@@ -189,12 +194,14 @@ mark
 }
 
 
-table {
+table
+{
     border: 1px solid var(--background-secondary) !important;
     border-collapse: collapse;
 }
   
-th {
+th
+{
     font-weight: 600 !important;
     border: 0px !important;
     border-bottom: 2px solid var(--red) !important;
@@ -203,7 +210,8 @@ th {
     color: var(--red-bright);
 }
 
-td {
+td
+{
     border-left: 0px !important;
     border-right: 0px !important;
     border-bottom: 1px solid var(--background-secondary) !important;
@@ -211,7 +219,8 @@ td {
 
 tr:nth-child(even){ background-color: var(--table-row-even) }
 tr:nth-child(odd){ background-color: var(--table-row-odd) }
-tr:hover { background-color: var(--table-hover); }
+tr:hover
+{ background-color: var(--table-hover); }
   
 thead
 {
@@ -261,7 +270,8 @@ thead
     padding-top: 0 !important;
 }
 
-.cm-formatting-header {
+.cm-formatting-header
+{
     font-family: var(--font-text-theme);
     color: var(--black-bright) !important;
     font-weight: 200 !important;
@@ -446,7 +456,7 @@ h1, h2, h3, h4, h5, h6
 {
     font-family: var(--font-header-text-theme);
     letter-spacing: -0.03em;
-    font-weight: 800 !important;
+    font-weight: 600 !important;
 }
 
 .HyperMD-header-1,
@@ -529,14 +539,21 @@ h1, h2, h3, h4, h5, h6
     opacity: 60% !important;
 }
 
-input.task-list-item-checkbox {
+li.task-list-item.is-checked
+{
+    color: var(--black-bright) !important;
+}
+
+input.task-list-item-checkbox
+{
     border: 1px solid var(--task-checkbox);
     appearance: none;
     -webkit-appearance: none;
     filter: none;
 }
 
-input.task-list-item-checkbox:checked {
+input.task-list-item-checkbox:checked
+{
     background-color: var(--task-checkbox);
     box-shadow: inset 0 0 0 2px var(--background-primary);
 }
@@ -546,11 +563,20 @@ input.task-list-item-checkbox:checked {
     fill: var(--blue-dim) !important;
 }
 
-.setting-item-control input[type="text"] {
+.setting-item-control input[type="text"]
+{
     color: var(--text-normal);
 }
-.setting-item-control input[type="text"]::placeholder {
+.setting-item-control input[type="text"]::placeholder
+{
     color: var(--blue-dim);
+}
+
+.markdown-rendered blockquote 
+{
+    border-width: 0;
+    border-left-width: 4px;
+    border-color: var(--cyan-bright)
 }
 
 /* Collapse/folding indicators */
