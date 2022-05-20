@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200..600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200..700&display=swap');
 
 :root
 {
@@ -38,27 +38,27 @@
     --background-secondary-alt:   var(--black-dim);
     --text-normal:                var(--white-dim);
     --text-faint:                 var(--white-bright);
-    --text-muted:                 var(--white);
-    --text-title-h1:              var(--red);
-    --text-title-h2:              var(--cyan);
+    --text-muted:                 var(--white-dim);
+    --text-title-h1:              var(--yellow);
+    --text-title-h2:              var(--yellow);
     --text-title-h3:              var(--yellow);
-    --text-title-h4:              var(--green);
-    --text-title-h5:              var(--magenta);
-    --text-title-h6:              var(--cyan);
-    --text-link:                  var(--blue);
+    --text-title-h4:              var(--yellow);
+    --text-title-h5:              var(--yellow);
+    --text-title-h6:              var(--yellow);
+    --text-link:                  var(--red-dim);
     --text-a:                     var(--red-dim);
-    --text-a-hover:               var(--red-bright);
+    --text-a-hover:               var(--red-dim);
     --text-mark:                  rgba(136, 192, 208, 0.3); /* frost1 */
     --pre-code:                   var(--black);
     --text-highlight-bg:          var(--green);
     --text-highlight-bg-active:   var(--green);
-    --interactive-accent:         var(--red-dim);
-    --interactive-before:         var(--blue-dim);
+    --interactive-accent:         var(--cyan);
+    --interactive-before:         var(--yellow);
     --background-modifier-border: var(--black-bright);
     --text-accent:                var(--cyan);
     --interactive-accent-rgb:     var(--cyan);
     --inline-code:                var(--green);
-    --code-block:                 var(--white);
+    --code-block:                 var(--green);
     --vim-cursor:                 var(--cyan);
     --text-selection:             var(--blue-dim);
     --text-tag:                   var(--red-dim);
@@ -114,7 +114,7 @@ body
 
 strong
 {
-    font-weight: 600 !important;
+    font-weight: 700 !important;
 }
 
 a,
@@ -202,7 +202,7 @@ table
   
 th
 {
-    font-weight: 600 !important;
+    font-weight: 700 !important;
     border: 0px !important;
     border-bottom: 2px solid var(--red) !important;
     text-align: left;
@@ -357,7 +357,7 @@ pre.HyperMD-table-row.CodeMirror-line > *,
 
 .workspace-leaf-header-title
 {
-    font-weight: 600 !important;
+    font-weight: 700 !important;
 }
 
 .side-dock-title
@@ -407,7 +407,7 @@ pre.HyperMD-table-row.CodeMirror-line > *,
 
 .markdown-embed-title
 {
-    font-weight: 600 !important;
+    font-weight: 700 !important;
 }
 
 .markdown-embed
@@ -455,49 +455,49 @@ h6 a
 h1, h2, h3, h4, h5, h6
 {
     font-family: var(--font-header-text-theme);
-    letter-spacing: -0.03em;
-    font-weight: 600 !important;
+    letter-spacing: -0.023em;
+    font-weight: 700 !important;
 }
 
 .HyperMD-header-1,
 .markdown-preview-section h1
 {
-    font-size: 2.4em !important;
+    /* font-size: 2.4em !important; */
     color: var(--text-title-h1) !important;
 }
 
 .HyperMD-header-2,
 .markdown-preview-section h2
 {
-    font-size: 2.0em !important;
+    /* font-size: 2.0em !important; */
     color: var(--text-title-h2) !important;
 }
 
 .HyperMD-header-3,
 .markdown-preview-section h3
 {
-    font-size: 1.8em !important;
+    /* font-size: 1.8em !important; */
     color: var(--text-title-h3) !important;
 }
 
 .HyperMD-header-4,
 .markdown-preview-section h4
 {
-    font-size: 1.6em !important;
+    /* font-size: 1.6em !important; */
     color: var(--text-title-h4) !important;
 }
 
 .HyperMD-header-5,
 .markdown-preview-section h5
 {
-    font-size: 1.4em !important;
+    /* font-size: 1.4em !important; */
     color: var(--text-title-h5) !important;
 }
 
 .HyperMD-header-6,
 .markdown-preview-section h6
 {
-    font-size: 1.2em !important;
+    /* font-size: 1.2em !important; */
     color: var(--text-title-h6) !important;
 }
 
@@ -524,13 +524,13 @@ h1, h2, h3, h4, h5, h6
 .mod-cta
 {
     color: var(--background-secondary-alt) !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
 }
 
 .mod-cta:hover
 {
     background-color: var(--interactive-before) !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
 }
 
 .CodeMirror-cursor
@@ -584,4 +584,13 @@ input.task-list-item-checkbox:checked
 .CodeMirror-guttermarker-subtle:not(.CodeMirror-foldgutter-folded)
 {
     color: var(--black) !important;
+}
+
+.cm-gutterElement
+{
+    color: var(--black);
+}
+.cm-gutterElement.cm-active
+{
+    color: var(--red-dim);
 }
