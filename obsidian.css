@@ -47,18 +47,18 @@
     --text-title-h6:              var(--yellow);
     --text-link:                  var(--blue);
     --text-a:                     var(--red-dim);
-    --text-a-hover:               var(--red-bright);
+    --text-a-hover:               var(--red-dim);
     --text-mark:                  rgba(136, 192, 208, 0.3); /* frost1 */
     --pre-code:                   var(--black);
     --text-highlight-bg:          var(--green);
     --text-highlight-bg-active:   var(--green);
-    --interactive-accent:         var(--red-dim);
-    --interactive-before:         var(--blue-dim);
+    --interactive-accent:         var(--red);
+    --interactive-before:         var(--magenta-bright);
     --background-modifier-border: var(--black-bright);
     --text-accent:                var(--cyan);
     --interactive-accent-rgb:     var(--cyan);
     --inline-code:                var(--green);
-    --code-block:                 var(--white);
+    --code-block:                 var(--green);
     --vim-cursor:                 var(--cyan);
     --text-selection:             var(--blue-dim);
     --text-tag:                   var(--red-dim);
