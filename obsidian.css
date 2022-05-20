@@ -38,13 +38,13 @@
     --background-secondary-alt:   var(--black-dim);
     --text-normal:                var(--white-dim);
     --text-faint:                 var(--white-bright);
-    --text-muted:                 var(--white);
-    --text-title-h1:              var(--red);
-    --text-title-h2:              var(--cyan);
+    --text-muted:                 var(--white-dim);
+    --text-title-h1:              var(--yellow);
+    --text-title-h2:              var(--yellow);
     --text-title-h3:              var(--yellow);
-    --text-title-h4:              var(--green);
-    --text-title-h5:              var(--magenta);
-    --text-title-h6:              var(--cyan);
+    --text-title-h4:              var(--yellow);
+    --text-title-h5:              var(--yellow);
+    --text-title-h6:              var(--yellow);
     --text-link:                  var(--blue);
     --text-a:                     var(--red-dim);
     --text-a-hover:               var(--red-bright);
@@ -455,49 +455,49 @@ h6 a
 h1, h2, h3, h4, h5, h6
 {
     font-family: var(--font-header-text-theme);
-    letter-spacing: -0.03em;
+    letter-spacing: -0.023em;
     font-weight: 600 !important;
 }
 
 .HyperMD-header-1,
 .markdown-preview-section h1
 {
-    font-size: 2.4em !important;
+    /* font-size: 2.4em !important; */
     color: var(--text-title-h1) !important;
 }
 
 .HyperMD-header-2,
 .markdown-preview-section h2
 {
-    font-size: 2.0em !important;
+    /* font-size: 2.0em !important; */
     color: var(--text-title-h2) !important;
 }
 
 .HyperMD-header-3,
 .markdown-preview-section h3
 {
-    font-size: 1.8em !important;
+    /* font-size: 1.8em !important; */
     color: var(--text-title-h3) !important;
 }
 
 .HyperMD-header-4,
 .markdown-preview-section h4
 {
-    font-size: 1.6em !important;
+    /* font-size: 1.6em !important; */
     color: var(--text-title-h4) !important;
 }
 
 .HyperMD-header-5,
 .markdown-preview-section h5
 {
-    font-size: 1.4em !important;
+    /* font-size: 1.4em !important; */
     color: var(--text-title-h5) !important;
 }
 
 .HyperMD-header-6,
 .markdown-preview-section h6
 {
-    font-size: 1.2em !important;
+    /* font-size: 1.2em !important; */
     color: var(--text-title-h6) !important;
 }
 
