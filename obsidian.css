@@ -585,3 +585,12 @@ input.task-list-item-checkbox:checked
 {
     color: var(--black) !important;
 }
+
+.cm-gutterElement
+{
+    color: var(--black);
+}
+.cm-gutterElement.cm-active
+{
+    color: var(--red-dim);
+}
