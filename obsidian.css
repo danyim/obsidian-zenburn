@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200..600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200..700&display=swap');
 
 :root
 {
@@ -45,15 +45,15 @@
     --text-title-h4:              var(--yellow);
     --text-title-h5:              var(--yellow);
     --text-title-h6:              var(--yellow);
-    --text-link:                  var(--blue);
+    --text-link:                  var(--red-dim);
     --text-a:                     var(--red-dim);
     --text-a-hover:               var(--red-dim);
     --text-mark:                  rgba(136, 192, 208, 0.3); /* frost1 */
     --pre-code:                   var(--black);
     --text-highlight-bg:          var(--green);
     --text-highlight-bg-active:   var(--green);
-    --interactive-accent:         var(--red);
-    --interactive-before:         var(--magenta-bright);
+    --interactive-accent:         var(--cyan);
+    --interactive-before:         var(--yellow);
     --background-modifier-border: var(--black-bright);
     --text-accent:                var(--cyan);
     --interactive-accent-rgb:     var(--cyan);
@@ -114,7 +114,7 @@ body
 
 strong
 {
-    font-weight: 600 !important;
+    font-weight: 700 !important;
 }
 
 a,
@@ -202,7 +202,7 @@ table
   
 th
 {
-    font-weight: 600 !important;
+    font-weight: 700 !important;
     border: 0px !important;
     border-bottom: 2px solid var(--red) !important;
     text-align: left;
@@ -357,7 +357,7 @@ pre.HyperMD-table-row.CodeMirror-line > *,
 
 .workspace-leaf-header-title
 {
-    font-weight: 600 !important;
+    font-weight: 700 !important;
 }
 
 .side-dock-title
@@ -407,7 +407,7 @@ pre.HyperMD-table-row.CodeMirror-line > *,
 
 .markdown-embed-title
 {
-    font-weight: 600 !important;
+    font-weight: 700 !important;
 }
 
 .markdown-embed
@@ -456,7 +456,7 @@ h1, h2, h3, h4, h5, h6
 {
     font-family: var(--font-header-text-theme);
     letter-spacing: -0.023em;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
 }
 
 .HyperMD-header-1,
@@ -524,13 +524,13 @@ h1, h2, h3, h4, h5, h6
 .mod-cta
 {
     color: var(--background-secondary-alt) !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
 }
 
 .mod-cta:hover
 {
     background-color: var(--interactive-before) !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
 }
 
 .CodeMirror-cursor
