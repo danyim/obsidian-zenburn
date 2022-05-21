@@ -52,9 +52,10 @@
     --pre-code:                   var(--black);
     --text-highlight-bg:          var(--green);
     --text-highlight-bg-active:   var(--green);
-    --interactive-accent:         var(--cyan);
+    --interactive-accent:         var(--blue);
     --interactive-before:         var(--yellow);
     --background-modifier-border: var(--black-bright);
+    --background-modifier-error:  var(--red-dim);
     --text-accent:                var(--cyan);
     --interactive-accent-rgb:     var(--cyan);
     --inline-code:                var(--green);
@@ -586,6 +587,7 @@ input.task-list-item-checkbox:checked
     color: var(--black) !important;
 }
 
+/* Inactive/active gutter line numbers */
 .cm-gutterElement
 {
     color: var(--black);
@@ -593,4 +595,10 @@ input.task-list-item-checkbox:checked
 .cm-gutterElement.cm-active
 {
     color: var(--red-dim);
+}
+
+/* Toast notices on the top right of the interface */
+.notice-container .notice
+{
+    background-color: var(--blue-dim) !important;
 }
