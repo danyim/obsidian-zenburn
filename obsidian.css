@@ -233,7 +233,12 @@ thead
     line-height: normal !important;
     padding-left: 4px !important;
     padding-right: 4px !important;
+    line-height: 1.1rem !important;
     /* background-color: var(--pre-code) !important; */
+}
+.cm-s-obsidian .HyperMD-table-row span.cm-inline-code
+{
+    font-size: 100% !important;
 }
 
 .HyperMD-table-row-0
@@ -308,6 +313,8 @@ thead
     color: var(--white-dim) !important;
 }
 
+/** Code, inline and blocks **/
+.markdown-rendered code,
 .markdown-preview-section pre code,
 .markdown-preview-section code
 {
@@ -315,12 +322,17 @@ thead
     background-color: var(--pre-code) !important;
 }
 
+.markdown-rendered code,
 .markdown-preview-section pre code
 {
     padding: 4px !important;
     line-height: 1.4em !important;
-    display: block !important;
     color: var(--code-block) !important;
+}
+
+.markdown-preview-section pre code
+{
+    display: block !important;
 }
 
 .markdown-preview-section code
