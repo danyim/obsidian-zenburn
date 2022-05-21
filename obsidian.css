@@ -322,12 +322,20 @@ thead
     background-color: var(--pre-code) !important;
 }
 
+.markdown-rendered pre {
+    padding: 0;
+}
+
 .markdown-rendered code,
 .markdown-preview-section pre code
 {
     padding: 4px !important;
     line-height: 1.4em !important;
     color: var(--code-block) !important;
+}
+
+.markdown-preview-section pre code {
+    padding: 16px !important;
 }
 
 .markdown-preview-section pre code
