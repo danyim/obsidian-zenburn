@@ -52,7 +52,7 @@
     --pre-code:                   var(--black);
     --text-highlight-bg:          var(--green);
     --text-highlight-bg-active:   var(--green);
-    --interactive-accent:         var(--blue);
+    --interactive-accent:         var(--red-dim);
     --interactive-before:         var(--yellow);
     --background-modifier-border: var(--black-bright);
     --background-modifier-error:  var(--red-dim);
