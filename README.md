@@ -2,7 +2,7 @@
 
 ![](screen.png)
 
-Zenburn, the classic low-contrast vim theme, now available for Obsidian. Available in dark mode only.
+Zenburn, the classic low-contrast vim theme, is now available in Obsidian. Dark mode only.
 
 This theme is best paired with [Inter UI](https://rsms.me/inter/) and [Inconsolata](https://fonts.google.com/specimen/Inconsolata).
 
