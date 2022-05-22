@@ -39,8 +39,8 @@
     --text-normal:                var(--white-dim);
     --text-faint:                 var(--white-bright);
     --text-muted:                 var(--white-dim);
-    --text-title-h1:              var(--red);
-    --text-title-h2:              var(--magenta-bright);
+    --text-title-h1:              var(--magenta-bright);
+    --text-title-h2:              var(--yellow);
     --text-title-h3:              var(--yellow);
     --text-title-h4:              var(--yellow);
     --text-title-h5:              var(--yellow);
@@ -54,7 +54,7 @@
     --text-highlight-bg-active:   var(--green);
     --interactive-accent:         var(--yellow-dim);
     --interactive-before:         var(--yellow);
-    --background-modifier-border: var(--magenta);
+    --background-modifier-border: var(--red);
     --background-modifier-error:  var(--red-dim);
     --text-accent:                var(--cyan);
     --text-on-accent:             var(--black-dim);
@@ -64,11 +64,11 @@
     --vim-cursor:                 var(--cyan);
     --text-selection:             var(--blue-dim);
     --text-tag:                   var(--red-dim);
-    --task-checkbox:              var(--white);
+    --task-checkbox:              var(--red);
     --table-header:               var(--black-dim);
     --table-row-even:             var(--black);
     --table-row-odd:              var(--black-bright);
-    --table-hover:                var(--blue-bright);
+    --table-hover:                var(--red-dim);
 }
 
 body
