@@ -593,16 +593,11 @@ input.task-list-item-checkbox:checked
 {
     color: var(--text-normal);
 }
-.setting-item-control input[type="text"]::placeholder
-{
-    color: var(--blue-dim);
-}
 
-.markdown-rendered blockquote 
+input[type="text"]::placeholder
 {
-    border-width: 0;
-    border-left-width: 4px;
-    border-color: var(--cyan-bright)
+    color: var(--interactive-before) !important;
+    font-size: 85%;
 }
 
 /* Collapse/folding indicators */
@@ -625,14 +620,10 @@ input.task-list-item-checkbox:checked
 /* Toast notices on the top right of the interface */
 .notice-container .notice
 {
-    background-color: var(--blue-dim) !important;
+    background-color: var(--interactive-before) !important;
 }
 
 .community-theme.is-selected
 {
     color: var(--background-primary-alt);
-}
-
-input::placeholder {
-    color: var(--interactive-accent) !important;
 }
