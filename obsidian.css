@@ -39,7 +39,7 @@
     --text-normal:                var(--white-dim);
     --text-faint:                 var(--white-bright);
     --text-muted:                 var(--white-dim);
-    --text-title-h1:              var(--yellow);
+    --text-title-h1:              var(--magenta-bright);
     --text-title-h2:              var(--yellow);
     --text-title-h3:              var(--yellow);
     --text-title-h4:              var(--yellow);
@@ -54,7 +54,7 @@
     --text-highlight-bg-active:   var(--green);
     --interactive-accent:         var(--yellow-dim);
     --interactive-before:         var(--yellow);
-    --background-modifier-border: var(--black-bright);
+    --background-modifier-border: var(--red);
     --background-modifier-error:  var(--red-dim);
     --text-accent:                var(--cyan);
     --text-on-accent:             var(--black-dim);
@@ -64,11 +64,11 @@
     --vim-cursor:                 var(--cyan);
     --text-selection:             var(--blue-dim);
     --text-tag:                   var(--red-dim);
-    --task-checkbox:              var(--white);
+    --task-checkbox:              var(--red);
     --table-header:               var(--black-dim);
     --table-row-even:             var(--black);
     --table-row-odd:              var(--black-bright);
-    --table-hover:                var(--blue-bright);
+    --table-hover:                var(--red-dim);
 }
 
 body
@@ -593,16 +593,11 @@ input.task-list-item-checkbox:checked
 {
     color: var(--text-normal);
 }
-.setting-item-control input[type="text"]::placeholder
-{
-    color: var(--blue-dim);
-}
 
-.markdown-rendered blockquote 
+input[type="text"]::placeholder
 {
-    border-width: 0;
-    border-left-width: 4px;
-    border-color: var(--cyan-bright)
+    color: var(--interactive-before) !important;
+    font-size: 85%;
 }
 
 /* Collapse/folding indicators */
@@ -625,14 +620,10 @@ input.task-list-item-checkbox:checked
 /* Toast notices on the top right of the interface */
 .notice-container .notice
 {
-    background-color: var(--blue-dim) !important;
+    background-color: var(--interactive-before) !important;
 }
 
 .community-theme.is-selected
 {
     color: var(--background-primary-alt);
-}
-
-input::placeholder {
-    color: var(--interactive-accent) !important;
 }
