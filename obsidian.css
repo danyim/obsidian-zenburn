@@ -52,11 +52,12 @@
     --pre-code:                   var(--black);
     --text-highlight-bg:          var(--green);
     --text-highlight-bg-active:   var(--green);
-    --interactive-accent:         var(--red-dim);
+    --interactive-accent:         var(--yellow-dim);
     --interactive-before:         var(--yellow);
     --background-modifier-border: var(--black-bright);
     --background-modifier-error:  var(--red-dim);
     --text-accent:                var(--cyan);
+    --text-on-accent:             var(--black-dim);
     --interactive-accent-rgb:     var(--cyan);
     --inline-code:                var(--green);
     --code-block:                 var(--green);
@@ -542,9 +543,9 @@ h1, h2, h3, h4, h5, h6
     background-color: var(--background-secondary-alt);
 }
 
-.mod-cta
+button.mod-cta
 {
-    color: var(--background-secondary-alt) !important;
+    color: var(--background-secondary-alt);
     font-weight: 700 !important;
 }
 
@@ -552,6 +553,10 @@ h1, h2, h3, h4, h5, h6
 {
     background-color: var(--interactive-before) !important;
     font-weight: 700 !important;
+}
+
+.community-theme.is-selected button {
+    color: var(--interactive-accent);
 }
 
 .CodeMirror-cursor
@@ -621,4 +626,13 @@ input.task-list-item-checkbox:checked
 .notice-container .notice
 {
     background-color: var(--blue-dim) !important;
+}
+
+.community-theme.is-selected
+{
+    color: var(--background-primary-alt);
+}
+
+input::placeholder {
+    color: var(--interactive-accent) !important;
 }
