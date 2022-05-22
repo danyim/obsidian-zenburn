@@ -39,8 +39,8 @@
     --text-normal:                var(--white-dim);
     --text-faint:                 var(--white-bright);
     --text-muted:                 var(--white-dim);
-    --text-title-h1:              var(--yellow);
-    --text-title-h2:              var(--yellow);
+    --text-title-h1:              var(--red);
+    --text-title-h2:              var(--magenta-bright);
     --text-title-h3:              var(--yellow);
     --text-title-h4:              var(--yellow);
     --text-title-h5:              var(--yellow);
@@ -54,7 +54,7 @@
     --text-highlight-bg-active:   var(--green);
     --interactive-accent:         var(--yellow-dim);
     --interactive-before:         var(--yellow);
-    --background-modifier-border: var(--black-bright);
+    --background-modifier-border: var(--magenta);
     --background-modifier-error:  var(--red-dim);
     --text-accent:                var(--cyan);
     --text-on-accent:             var(--black-dim);
