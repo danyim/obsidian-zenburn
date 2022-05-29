@@ -40,8 +40,8 @@
     --text-faint:                 var(--white-bright);
     --text-muted:                 var(--white-dim);
     --text-title-h1:              var(--magenta-bright);
-    --text-title-h2:              var(--yellow);
-    --text-title-h3:              var(--yellow);
+    --text-title-h2:              var(--cyan);
+    --text-title-h3:              var(--cyan);
     --text-title-h4:              var(--yellow);
     --text-title-h5:              var(--yellow);
     --text-title-h6:              var(--yellow);
@@ -67,8 +67,8 @@
     --task-checkbox:              var(--red);
     --table-header:               var(--black-dim);
     --table-row-even:             var(--black);
-    --table-row-odd:              var(--black-bright);
-    --table-hover:                var(--red-dim);
+    --table-row-odd:              var(--black-dim);
+    --table-hover:                var(--black-bright);
 }
 
 body
@@ -477,7 +477,7 @@ h6 a
 h1, h2, h3, h4, h5, h6
 {
     font-family: var(--font-header-text-theme);
-    letter-spacing: -0.023em;
+    letter-spacing: -0.028em;
     font-weight: 700 !important;
 }
 
