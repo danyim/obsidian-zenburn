@@ -40,8 +40,8 @@
     --text-faint:                 var(--white-bright);
     --text-muted:                 var(--white-dim);
     --text-title-h1:              var(--magenta-bright);
-    --text-title-h2:              var(--cyan);
-    --text-title-h3:              var(--cyan);
+    --text-title-h2:              var(--yellow);
+    --text-title-h3:              var(--yellow);
     --text-title-h4:              var(--yellow);
     --text-title-h5:              var(--yellow);
     --text-title-h6:              var(--yellow);
