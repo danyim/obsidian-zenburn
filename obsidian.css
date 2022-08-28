@@ -36,9 +36,9 @@
     --background-primary-alt:     var(--black-dim);
     --background-secondary:       var(--black);
     --background-secondary-alt:   var(--black-dim);
-    --text-normal:                var(--white-dim);
+    --text-normal:                var(--white-bright);
     --text-faint:                 var(--white-bright);
-    --text-muted:                 var(--white-dim);
+    --text-muted:                 var(--yellow);
     --text-title-h1:              var(--magenta-bright);
     --text-title-h2:              var(--yellow);
     --text-title-h3:              var(--yellow);
@@ -69,6 +69,7 @@
     --table-row-even:             var(--black);
     --table-row-odd:              var(--black-dim);
     --table-hover:                var(--black-bright);
+    --color-text-weeknum:         var(--red-dim);
 }
 
 body
