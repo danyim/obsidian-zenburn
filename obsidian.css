@@ -53,6 +53,7 @@
     --text-highlight-bg:          var(--green);
     --text-highlight-bg-active:   var(--green);
     --interactive-accent:         var(--yellow-dim);
+    --interactive-accent-hover:   var(--yellow);
     --interactive-before:         var(--yellow);
     --background-modifier-border: var(--red);
     --background-modifier-error:  var(--red-dim);
