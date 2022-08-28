@@ -36,9 +36,9 @@
     --background-primary-alt:     var(--black-dim);
     --background-secondary:       var(--black);
     --background-secondary-alt:   var(--black-dim);
-    --text-normal:                var(--white-dim);
+    --text-normal:                var(--white-bright);
     --text-faint:                 var(--white-bright);
-    --text-muted:                 var(--white-dim);
+    --text-muted:                 var(--yellow);
     --text-title-h1:              var(--magenta-bright);
     --text-title-h2:              var(--yellow);
     --text-title-h3:              var(--yellow);
@@ -50,9 +50,10 @@
     --text-a-hover:               var(--red-dim);
     --text-mark:                  rgba(136, 192, 208, 0.3); /* frost1 */
     --pre-code:                   var(--black);
-    --text-highlight-bg:          var(--green);
-    --text-highlight-bg-active:   var(--green);
+    --text-highlight-bg:          var(--blue-dim);
+    --text-highlight-bg-active:   var(--blue-dim);
     --interactive-accent:         var(--yellow-dim);
+    --interactive-accent-hover:   var(--yellow);
     --interactive-before:         var(--yellow);
     --background-modifier-border: var(--red);
     --background-modifier-error:  var(--red-dim);
@@ -67,8 +68,9 @@
     --task-checkbox:              var(--red);
     --table-header:               var(--black-dim);
     --table-row-even:             var(--black);
-    --table-row-odd:              var(--black-bright);
-    --table-hover:                var(--red-dim);
+    --table-row-odd:              var(--black-dim);
+    --table-hover:                var(--black-bright);
+    --color-text-weeknum:         var(--red-dim);
 }
 
 body
@@ -477,7 +479,7 @@ h6 a
 h1, h2, h3, h4, h5, h6
 {
     font-family: var(--font-header-text-theme);
-    letter-spacing: -0.023em;
+    letter-spacing: -0.028em;
     font-weight: 700 !important;
 }
 
