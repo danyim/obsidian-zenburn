@@ -35,16 +35,16 @@
     --background-primary:         var(--black-dim);
     --background-primary-alt:     var(--black-dim);
     --background-secondary:       var(--black);
-    --background-secondary-alt:   var(--black-dim);
+    --background-secondary-alt:   var(--black);
     --text-normal:                var(--white-bright);
     --text-faint:                 var(--white-bright);
     --text-muted:                 var(--yellow);
     --text-title-h1:              var(--magenta-bright);
     --text-title-h2:              var(--yellow);
     --text-title-h3:              var(--yellow);
-    --text-title-h4:              var(--yellow);
-    --text-title-h5:              var(--yellow);
-    --text-title-h6:              var(--yellow);
+    --text-title-h4:              var(--magenta-bright);
+    --text-title-h5:              var(--white-bright);
+    --text-title-h6:              var(--white-bright);
     --text-link:                  var(--red-dim);
     --text-a:                     var(--red-dim);
     --text-a-hover:               var(--red-dim);
@@ -481,6 +481,14 @@ h1, h2, h3, h4, h5, h6
     font-family: var(--font-header-text-theme);
     letter-spacing: -0.028em;
     font-weight: 700 !important;
+}
+
+.cm-header:not(.cm-formatting).cm-header-4,
+.cm-header:not(.cm-formatting).cm-header-5,
+.cm-header:not(.cm-formatting).cm-header-6
+{
+    letter-spacing: -0.018em;
+    font-weight: 400 !important;
 }
 
 .HyperMD-header-1,
