@@ -483,6 +483,14 @@ h1, h2, h3, h4, h5, h6
     font-weight: 700 !important;
 }
 
+.cm-header:not(.cm-formatting).cm-header-4,
+.cm-header:not(.cm-formatting).cm-header-5,
+.cm-header:not(.cm-formatting).cm-header-6
+{
+    letter-spacing: -0.018em;
+    font-weight: 400 !important;
+}
+
 .HyperMD-header-1,
 .markdown-preview-section h1
 {
