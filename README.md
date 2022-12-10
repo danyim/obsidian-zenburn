@@ -9,4 +9,4 @@ This theme is best paired with [Inter UI](https://rsms.me/inter/) and [Inconsola
 What's Zenburn, you ask? [Well, let me enlighten you.](https://github.com/jnurmine/Zenburn)
 
 ## Installation
-- Options > Appearance > Manage > Search for "Zenburn"
+- Options > Appearance > Manage > Search for "Zenburn" > "Install and use"
