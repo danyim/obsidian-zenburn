@@ -54,7 +54,7 @@
     --text-highlight-bg-active:   var(--blue-dim);
     --interactive-accent:         var(--yellow-dim);
     --interactive-accent-hover:   var(--yellow);
-    --interactive-before:         var(--yellow);
+    --interactive-before:         var(--blue-dim);
     --background-modifier-border: var(--red);
     --background-modifier-error:  var(--red-dim);
     --text-accent:                var(--cyan);
