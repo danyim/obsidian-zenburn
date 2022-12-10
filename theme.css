@@ -335,6 +335,7 @@ thead
     padding: 0;
 }
 
+
 .markdown-rendered code,
 .markdown-preview-section pre code
 {
@@ -377,11 +378,19 @@ pre.HyperMD-table-row.CodeMirror-line > *,
 {
     background-color: var(--pre-code) !important;
     color: var(--inline-code) !important;
+    padding: 4px 6px !important;
+    border-radius: 5px;
+}
+span.cm-formatting.cm-formatting-code.cm-inline-code:nth-child(n)
+{
+    /* background-color: none !important; */
+    background-color: red !important;
     padding: 4px 0px !important;
 }
-.cm-formatting-code.cm-inline-code
+span.cm-formatting.cm-formatting-code.cm-inline-code:nth-child(2n)
 {
-    background-color: none !important;
+    /* background-color: none !important; */
+    background-color: blue !important;
     padding: 4px 0px !important;
 }
 
