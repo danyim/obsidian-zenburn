@@ -42,7 +42,6 @@
     --background-primary-alt:     var(--black-dim);
     --background-secondary:       var(--black);
     --background-secondary-alt:   var(--black);
-    --background-dark:            var(--black);
     --text-normal:                var(--white-bright);
     --text-faint:                 var(--white-bright);
     --text-muted:                 var(--yellow);
@@ -54,9 +53,8 @@
     --text-title-h6:              var(--white-bright);
     --text-link:                  var(--red-dim);
     --text-a:                     var(--red-dim);
-    --link-external-color:        var(--red-dim);
-    --text-a-hover:               var(--blue);
-    --link-external-hover-color:  var(--blue);
+    --text-a-hover:               var(--red-dim);
+    --link-external-hover-color:  var(--red);
     --text-mark:                  rgba(136, 192, 208, 0.3); /* frost1 */
     --pre-code:                   var(--black);
     --text-highlight-bg:          var(--blue-dim);
@@ -66,7 +64,8 @@
     --interactive-before:         var(--yellow-dim);
     --background-modifier-border: var(--red);
     --background-modifier-error:  var(--red-dim);
-    --text-accent:                var(--red);
+    --text-accent:                var(--red-dim);
+    --text-accent-hover:          var(--red);
     --text-on-accent:             var(--black-dim);
     --interactive-accent-rgb:     var(--cyan);
     --inline-code:                var(--green);
@@ -81,10 +80,36 @@
     --table-hover:                var(--black-bright);
     --color-text-weeknum:         var(--red-dim);
 
+    /* --list-indent:                1.25em; */
+    --list-indent:                50px;
+    /* Headings */
+    --h1-size:                    2em;
+    --h2-size:                    1.6em;
+    --h3-size:                    1.37em;
+    --h4-size:                    1.25em;
+    --h5-size:                    1.12em;
+    --h6-size:                    1.12em;
+    --h1-color:                   var(--text-title-h1);
+    --h2-color:                   var(--text-title-h2);
+    --h3-color:                   var(--text-title-h3);
+    --h4-color:                   var(--text-title-h4);
+    --h5-color:                   var(--text-title-h5);
+    --h6-color:                   var(--text-title-h6);
+    --h1-weight:                  700;
+    --h2-weight:                  700;
+    --h3-weight:                  700;
+    --h4-weight:                  400;
+    --h5-weight:                  400;
+    --h6-weight:                  400;
+    /* Specific elements */
+    --blockquote-border-color:    var(--yellow-dim);
+    --blockquote-border-thickness:0.2em;
+    --checkbox-color:             var(--yellow);
+    --checklist-done-color:       var(--black-bright);
     --tag-color:                  var(--red-dim);
-    --tag-color-hover:            var(--red);
-    --tag-background:             var(--background-dark);
-    --tag-background-hover:       var(--background-dim);
+    --tag-color-hover:            var(--black);
+    --tag-background:             var(--black);
+    --tag-background-hover:       var(--magenta-bright);
     --tag-radius:                 0.55em;
     --tag-padding-x:              0.45em;
     --tag-padding-y:              0.25em;
@@ -139,29 +164,13 @@ strong
     font-weight: 700 !important;
 }
 
-a,
-.cm-hmd-internal-link
-{
-    color: var(--text-a) !important;
-    text-decoration: none !important;
-}
-
-a:hover,
-.cm-hmd-internal-link:hover,
-.cm-url
-{
-    color: var(--text-a-hover) !important;
-    text-decoration: none !important;
-}
-
-a.tag:hover
-{
-    text-decoration: underline !important;
-}
-
 mark
 {
     background-color: var(--text-mark);
+}
+
+ol, ul {
+    margin: 0.25rem 0;
 }
 
 .titlebar
@@ -284,9 +293,10 @@ thead
     border-top-right-radius: 0 !important;
 }
 
-.HyperMD-list-line
+.cm-line.HyperMD-list-line
 {
     padding-top: 0 !important;
+    padding-left: var(--list-indent);
 }
 
 .cm-formatting-header
@@ -452,95 +462,21 @@ pre.HyperMD-table-row.CodeMirror-line > *,
     margin-right: 10px !important;
 }
 
-.cm-header-1.cm-link,
-h1 a
-{
-    color: var(--text-title-h1) !important;
-}
-
-.cm-header-2.cm-link,
-h2 a
-{
-    color: var(--text-title-h2) !important;
-}
-
-.cm-header-3.cm-link,
-h3 a
-{
-    color: var(--text-title-h3) !important;
-}
-.cm-header-4.cm-link,
-h4 a
-{
-    color: var(--text-title-h4) !important;
-}
-.cm-header-5.cm-link,
-h5 a
-{
-    color: var(--text-title-h5) !important;
-}
-.cm-header-6.cm-link,
-h6 a
-{
-    color: var(--text-title-h6) !important;
-}
-
 .cm-header:not(.cm-formatting),
-h1, h2, h3, h4, h5, h6
+h1, h2, h3
 {
-    font-family: var(--font-header-text-theme);
     letter-spacing: -0.028em;
-    font-weight: 700 !important;
 }
 
+h4, h5, h6,
+.HyperMD-header-4,
+.HyperMD-header-5,
+.HyperMD-header-6,
 .cm-header:not(.cm-formatting).cm-header-4,
 .cm-header:not(.cm-formatting).cm-header-5,
 .cm-header:not(.cm-formatting).cm-header-6
 {
-    letter-spacing: -0.018em;
-    font-weight: 400 !important;
-}
-
-.HyperMD-header-1,
-.markdown-preview-section h1
-{
-    /* font-size: 2.4em !important; */
-    color: var(--text-title-h1) !important;
-}
-
-.HyperMD-header-2,
-.markdown-preview-section h2
-{
-    /* font-size: 2.0em !important; */
-    color: var(--text-title-h2) !important;
-}
-
-.HyperMD-header-3,
-.markdown-preview-section h3
-{
-    /* font-size: 1.8em !important; */
-    color: var(--text-title-h3) !important;
-}
-
-.HyperMD-header-4,
-.markdown-preview-section h4
-{
-    /* font-size: 1.6em !important; */
-    color: var(--text-title-h4) !important;
-}
-
-.HyperMD-header-5,
-.markdown-preview-section h5
-{
-    /* font-size: 1.4em !important; */
-    color: var(--text-title-h5) !important;
-}
-
-.HyperMD-header-6,
-.markdown-preview-section h6
-{
-    /* font-size: 1.2em !important; */
-    color: var(--text-title-h6) !important;
+    letter-spacing: -0.018em !important;
 }
 
 .suggestion-item.is-selected
@@ -551,16 +487,6 @@ h1, h2, h3, h4, h5, h6
 .empty-state-action:hover
 {
     color: var(--interactive-accent);
-}
-
-.checkbox-container
-{
-    background-color: var(--interactive-before);
-}
-
-.checkbox-container:after
-{
-    background-color: var(--background-secondary-alt);
 }
 
 button.mod-cta
@@ -583,25 +509,6 @@ button.mod-cta
 {
     background-color: var(--vim-cursor) !important;
     opacity: 60% !important;
-}
-
-li.task-list-item.is-checked
-{
-    color: var(--black-bright) !important;
-}
-
-input.task-list-item-checkbox
-{
-    border: 1px solid var(--task-checkbox);
-    appearance: none;
-    -webkit-appearance: none;
-    filter: none;
-}
-
-input.task-list-item-checkbox:checked
-{
-    background-color: var(--task-checkbox);
-    box-shadow: inset 0 0 0 2px var(--background-primary);
 }
 
 .mermaid .note
