@@ -1,6 +1,6 @@
 /**
     Zenburn Theme for Obsidian
-    v1.0.0
+    v1.0.1
     https://github.com/danyim/obsidian-zenburn
     https://www.buymeacoffee.com/danyim
 */
@@ -60,7 +60,7 @@
     --text-highlight-bg-active:   var(--blue-dim);
     --interactive-accent:         var(--yellow-dim);
     --interactive-accent-hover:   var(--yellow);
-    --interactive-before:         var(--blue-dim);
+    --interactive-before:         var(--magenta-dim);
     --background-modifier-border: var(--red);
     --background-modifier-error:  var(--red-dim);
     --text-accent:                var(--cyan);
@@ -374,24 +374,40 @@ pre.HyperMD-table-row.CodeMirror-line > *,
     -webkit-font-smoothing: auto !important;
 }
 
-.cm-inline-code
+.cm-inline-code:not(.cm-formatting-code)
 {
     background-color: var(--pre-code) !important;
     color: var(--inline-code) !important;
     padding: 4px 6px !important;
-    border-radius: 5px;
+    --inline-code-border-radius: 4px;
+    border-radius: var(--inline-code-border-radius);
 }
-span.cm-formatting.cm-formatting-code.cm-inline-code:nth-child(n)
+/* Inline code tick style */
+.cm-formatting.cm-formatting-code
 {
-    /* background-color: none !important; */
-    background-color: red !important;
-    padding: 4px 0px !important;
+    background-color: var(--pre-code) !important;
+    color: var(--inline-code) !important;
+    padding: 4px 0px;
+    border-radius: var(--inline-code-border-radius);
 }
-span.cm-formatting.cm-formatting-code.cm-inline-code:nth-child(2n)
+/* Inline code: opening tick */
+.cm-formatting.cm-formatting-code:nth-of-type(3n+1)
 {
-    /* background-color: none !important; */
-    background-color: blue !important;
-    padding: 4px 0px !important;
+    border-radius: 0;
+    border-top-left-radius: var(--inline-code-border-radius);
+    border-bottom-left-radius: var(--inline-code-border-radius);
+}
+/* Inline code: closing tick */
+.cm-formatting.cm-formatting-code:nth-of-type(3n)
+{
+    border-radius: 0;
+    border-top-right-radius: var(--inline-code-border-radius);
+    border-bottom-right-radius: var(--inline-code-border-radius);
+}
+/* Inline code: between ticks */
+.cm-formatting.cm-formatting-code + .cm-inline-code {
+    border-radius: 0;
+    padding: 4px 2px !important;
 }
 
 .workspace-leaf-header-title
