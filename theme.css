@@ -1,6 +1,6 @@
 /**
     Zenburn Theme for Obsidian
-    v1.0.3
+    v1.0.4
     https://github.com/danyim/obsidian-zenburn
     https://www.buymeacoffee.com/danyim
 */
@@ -54,6 +54,7 @@
     --text-link:                  var(--red-dim);
     --text-a:                     var(--red-dim);
     --text-a-hover:               var(--red-dim);
+    --link-external-color:        var(--red-dim);
     --link-external-hover-color:  var(--red);
     --text-mark:                  rgba(136, 192, 208, 0.3); /* frost1 */
     --pre-code:                   var(--black);
@@ -170,6 +171,16 @@ mark
 
 ol, ul {
     margin: 0.25rem 0;
+}
+
+/** Ensures the format string after links have a different color */
+.cm-formatting-link-string
+{
+    color: var(--text-faint) !important;
+    text-decoration-line: none !important;
+}
+.cm-formatting-link-string + .cm-url {
+    color: var(--blue) !important;
 }
 
 .titlebar
