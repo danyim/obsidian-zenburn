@@ -1,6 +1,6 @@
 /**
     Zenburn Theme for Obsidian
-    v1.0.2
+    v1.0.3
     https://github.com/danyim/obsidian-zenburn
     https://www.buymeacoffee.com/danyim
 */
@@ -80,8 +80,7 @@
     --table-hover:                var(--black-bright);
     --color-text-weeknum:         var(--red-dim);
 
-    /* --list-indent:                1.25em; */
-    --list-indent:                50px;
+    --list-indent:                1.25em;
     /* Headings */
     --h1-size:                    2em;
     --h2-size:                    1.6em;
