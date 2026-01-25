@@ -1,0 +1,165 @@
+/**
+  * Zenburn Color Palette
+  * Extracted from https://raw.githubusercontent.com/jnurmine/Zenburn/refs/heads/master/colors/zenburn.vim for reference 
+  */
+
+:root {
+  /* ===== Base Colors ===== */
+
+  /* Foreground/Text */
+  --fg: #dcdccc;
+  --fg-light: #efefef;
+  --fg-dim: #dfdfdf;
+
+  /* Background */
+  --bg: #3f3f3f;
+  --bg-dark: #1f1f1f;
+  --bg-darker: #0f0f0f;
+  --bg-darkest: #000000;
+  --bg-light: #484848;
+  --bg-lighter: #4f4f4f;
+
+  /* ===== Grays ===== */
+  --gray: #8f8f8f;
+  --gray-dark: #6f6f6f;
+  --gray-darker: #5b605e;
+  --gray-darkest: #404040;
+  --gray-light: #9f9f9f;
+  --gray-lighter: #a8a8a8;
+  --gray-green: #545a4f;
+
+  /* ===== Reds/Pinks ===== */
+  --red: #dca3a3;
+  --red-dim: #bca3a3;
+  --red-bright: #ecbcbc;
+  --red-dark: #cc9393;
+  --red-error: #e37170;
+  --red-error-bright: #ecb3b3;
+  --red-visual: #f18c96;
+  --red-tag: #e89393;
+  --red-spell: #dc8c6c;
+  --red-spell-sp: #bc6c4c;
+
+  /* ===== Oranges ===== */
+  --orange: #ffcfaf;
+  --orange-dim: #dfaf8f;
+  --orange-light: #ffd7a7;
+  --orange-tan: #efdcbc;
+  --orange-brown: #cfbfaf;
+
+  /* ===== Yellows ===== */
+  --yellow: #f0dfaf;
+  --yellow-bright: #efef8f;
+  --yellow-brighter: #f8f893;
+  --yellow-pale: #ffffe0;
+  --yellow-cream: #f0efd0;
+  --yellow-lime: #ccdc90;
+  --yellow-lime-light: #ccd990;
+  --yellow-lime-bright: #cbecd0;
+  --yellow-status: #f2f3bb;
+  --yellow-cursor: #d2d39b;
+  --yellow-tab: #d0d0b8;
+  --yellow-tab-sel: #f0f0b0;
+  --yellow-pmenu: #d0d0a0;
+  --yellow-struct: #efefaf;
+
+  /* ===== Greens ===== */
+  --green: #7f9f7f;
+  --green-dark: #709080;
+  --green-darker: #5f7f5f;
+  --green-light: #9fafaf;
+  --green-lighter: #93b3a3;
+  --green-bright: #9ece9e;
+  --green-brighter: #9ccc9c;
+  --green-pale: #88b090;
+  --green-cursor: #8faf9f;
+  --green-teal: #80d4aa;
+  --green-cyan: #71d3b4;
+  --green-special: #82a282;
+  --green-spell-sp: #7cac7c;
+  --green-status: #688060;
+
+  /* ===== Blues ===== */
+  --blue: #8cd0d3;
+  --blue-light: #8cb0d3;
+  --blue-purple: #c0bed1;
+  --blue-spell: #8c8cbc;
+  --blue-spell-sp: #6c6c9c;
+
+  /* ===== Purples/Magentas ===== */
+  --purple-spell: #bc8cbc;
+  --purple-spell-sp: #bc6c9c;
+
+  /* ===== Whites ===== */
+  --white: #ffffff;
+  --white-cream: #dfe4cf;
+  --white-warm: #dfdfbf;
+  --white-pink: #dccdcc;
+
+  /* ===== UI Backgrounds ===== */
+  --bg-visual: #2f2f2f;
+  --bg-visual-alt: #304a3d;
+  --bg-visual-old: #233323;
+  --bg-search: #284f28;
+  --bg-search-inc: #385f38;
+  --bg-diff-add: #313c36;
+  --bg-diff-change: #333333;
+  --bg-diff-delete: #464646;
+  --bg-diff-text: #41363c;
+  --bg-error: #3d3535;
+  --bg-error-alt: #664040;
+  --bg-fold: #3f4040;
+  --bg-pmenu: #2c2e2e;
+  --bg-pmenu-dark: #242424;
+  --bg-pmenu-scroll: #2e3330;
+  --bg-pmenu-thumb: #a0afa0;
+  --bg-statusline: #313633;
+  --bg-tabline: #222222;
+  --bg-tabline-fill: #101010;
+  --bg-sign: #343434;
+  --bg-sign-dark: #181818;
+  --bg-cursor-line: #434443;
+  --bg-cursor-line-dark: #121212;
+  --bg-cursor-col: #2b2b2b;
+  --bg-color-col: #33332f;
+  --bg-line-nr: #262626;
+  --bg-line-nr-dark: #161616;
+  --bg-line-nr-subdued: #353535;
+  --bg-line-nr-subdued-dark: #1b1b1b;
+  --bg-conceal: #333333;
+  --bg-special-key: #444444;
+
+  /* ===== UI Foregrounds ===== */
+  --fg-cursor: #000d18;
+  --fg-pmenu-thumb: #040404;
+  --fg-statusline: #313633;
+  --fg-statusline-nc: #2e3330;
+  --fg-line-nr: #9fafaf;
+  --fg-line-nr-subdued: #5d6262;
+  --fg-line-nr-subdued-dark: #424242;
+  --fg-nontext: #5b605e;
+  --fg-nontext-dark: #404040;
+  --fg-label: #dfcfaf;
+  --fg-exception: #c3bf9f;
+  --fg-typedef: #dfe4cf;
+  --fg-underlined: #dcdccc;
+  --fg-ignore: #545a4f;
+
+  /* ===== Terminal ANSI Colors ===== */
+  --ansi-black: #1f1f1f;
+  --ansi-red: #cc9393;
+  --ansi-green: #5f7f5f;
+  --ansi-yellow: #ffd7a7;
+  --ansi-blue: #8cb0d3;
+  --ansi-magenta: #8f8f8f;
+  --ansi-cyan: #71d3b4;
+  --ansi-white: #dfe4cf;
+  --ansi-bright-black: #6f6f6f;
+  --ansi-bright-red: #ecb3b3;
+  --ansi-bright-yellow: #ffd7a7;
+  --ansi-bright-blue: #8cb0d3;
+  --ansi-bright-magenta: #8f8f8f;
+  --ansi-bright-cyan: #71d3b4;
+  --ansi-bright-white: #dfe4cf;
+  --ansi-bright-orange: #ffcfaf;
+}
