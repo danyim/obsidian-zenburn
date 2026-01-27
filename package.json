@@ -1,0 +1,7 @@
+{
+  "name": "obsidian-zenburn",
+  "version": "1.1.1",
+  "scripts": {
+    "version": "node version-bump.mjs && git add manifest.json versions.json"
+  }
+}

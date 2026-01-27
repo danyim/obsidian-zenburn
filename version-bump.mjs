@@ -24,3 +24,8 @@ writeFileSync("manifest.json", JSON.stringify(manifest, null, "\t"));
 let versions = JSON.parse(readFileSync("versions.json", "utf8"));
 versions[targetVersion] = minAppVersion;
 writeFileSync("versions.json", JSON.stringify(versions, null, "\t"));
+
+// update version in theme.css header comment
+let themeCss = readFileSync("theme.css", "utf8");
+themeCss = themeCss.replace(/v\d+\.\d+\.\d+/, `v${targetVersion}`);
+writeFileSync("theme.css", themeCss);

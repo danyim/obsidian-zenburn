@@ -1,6 +1,6 @@
 /**
     Zenburn Theme for Obsidian
-    v1.1.0
+    v1.1.1
     https://github.com/danyim/obsidian-zenburn
     https://www.buymeacoffee.com/danyim
 */
@@ -64,8 +64,8 @@
 .theme-dark.is-mobile {
   --background-primary: var(--bg);
   --background-primary-alt: var(--bg-dark);
-  --background-secondary: var(--bg);
-  --background-secondary-alt: var(--bg-dark);
+  --background-secondary: var(--bg-lighter);
+  --background-secondary-alt: var(--bg-darker);
   --text-normal: var(--white-bright);
   --text-faint: var(--white-bright);
   --text-muted: var(--yellow);
