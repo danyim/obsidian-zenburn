@@ -8,7 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..700&display=swap");
 
 :root {
-  --bg: #3f3f3f;
+  --bg: #333333;
   --bg-dark: #1f1f1f;
   --bg-darker: #0f0f0f;
   --bg-darkest: #000000;
@@ -62,6 +62,8 @@
 
 .theme-dark,
 .theme-dark.is-mobile {
+  --mono-rgb-0: 0, 0, 0;
+  /* --mono-rgb-100: 150, 150, 150; */
   --background-primary: var(--bg);
   --background-primary-alt: var(--bg-dark);
   --background-secondary: var(--bg-lighter);
@@ -75,21 +77,21 @@
   --text-title-h4: var(--magenta-bright);
   --text-title-h5: var(--white-bright);
   --text-title-h6: var(--white-bright);
-  --text-link: var(--red-dark);
-  --text-a: var(--red-dark);
+  --text-link: var(--red-bright);
+  --text-a: var(--red-bright);
   --text-a-hover: var(--red-dark);
-  --link-color: var(--red-dark);
-  --link-color-hover: var(--red-bright);
+  --link-color: var(--red-bright);
+  --link-color-hover: var(--red-dark);
   --link-external-color: var(--orange);
-  --link-external-color-hover: var(--orange-light);
+  --link-external-color-hover: var(--orange-dim);
   --text-mark: rgba(136, 192, 208, 0.3); /* frost1 */
   --blockquote-background-color: var(--bg-light);
   --text-highlight-bg: var(--blue-dim);
   --text-highlight-bg-active: var(--blue-dim);
   --interactive-normal: var(--bg-light);
   --interactive-hover: var(--bg-lighter);
-  --interactive-accent: var(--yellow);
-  --interactive-before: var(--yellow-bright);
+  --interactive-accent: var(--yellow-dim);
+  --interactive-before: var(--yellow);
   --background-modifier-border: var(--red);
   --background-modifier-error: var(--red-error);
   --text-accent: var(--red-dim);
@@ -458,10 +460,6 @@ h6,
 .cm-header:not(.cm-formatting).cm-header-5,
 .cm-header:not(.cm-formatting).cm-header-6 {
   letter-spacing: -0.018em !important;
-}
-
-.suggestion-item.is-selected {
-  background-color: var(--background-secondary);
 }
 
 .empty-state-action:hover {
