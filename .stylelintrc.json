@@ -1,0 +1,6 @@
+{
+	"extends": "stylelint-config-obsidianmd",
+	"rules": {
+		"selector-class-pattern": null
+	}
+}

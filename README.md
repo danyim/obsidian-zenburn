@@ -8,6 +8,11 @@ This theme is best paired with [Inter UI](https://rsms.me/inter/) and [Inconsola
 
 What's Zenburn, you ask? [Well, let me enlighten you.](https://github.com/jnurmine/Zenburn)
 
+## Mobile
+| | |
+|---|---|
+| ![](ios.png) | ![](ios-2.png) |
+
 ## Installation
 - Open your **Settings**
 - Under **Options** > **Appearance**, click **Manage** and search for "Zenburn"
@@ -17,4 +22,4 @@ What's Zenburn, you ask? [Well, let me enlighten you.](https://github.com/jnurmi
 Please [open an issue](https://github.com/danyim/obsidian-zenburn/issues) on this repo for any feedback or comments.
 
 
-<a href="https://www.buymeacoffee.com/danyim"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=danyim&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"></a>
+<a href="https://www.buymeacoffee.com/danyim"><img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=danyim&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" alt="Buy me a coffee"></a>
