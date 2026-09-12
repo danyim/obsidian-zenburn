@@ -32,14 +32,33 @@ Obsidian theme, so the contribution process is intentionally lightweight.
 
 ## Linting
 
-Before opening a pull request, run the theme through Obsidian's theme
-validation to catch common issues (unsupported browser features, duplicate
-selectors/properties, `!important` usage, and manifest problems):
+Before opening a pull request, run the theme through the official Obsidian
+theme lint config to catch common issues (unsupported browser features,
+duplicate selectors/properties, `!important` usage, and general CSS
+hygiene):
 
-- Use the [Obsidian Releases](https://github.com/obsidianmd/obsidian-releases)
-  theme validation tooling, or
-- Open the vault in Obsidian with the theme applied and check the developer
-  console for CSS warnings.
+```
+npm install
+npm run lint
+```
+
+This runs [Stylelint](https://stylelint.io/) with
+[`stylelint-config-obsidianmd`](https://www.npmjs.com/package/stylelint-config-obsidianmd),
+the same config the official
+[obsidian-sample-theme](https://github.com/obsidianmd/obsidian-sample-theme)
+uses. Note that it also flags stylistic nitpicks (hex color length,
+declaration ordering, kebab-case selectors) beyond the five checks that
+actually block theme submission — selectors like `.HyperMD-*` or
+`.CodeMirror-*` are Obsidian's own class names and will always fail the
+kebab-case rule, so don't "fix" those away.
+
+`authorUrl` in `manifest.json` pointing at the theme's own repo (it should
+point at your profile instead) isn't caught by Stylelint — that's validated
+separately when a theme is submitted to
+[obsidian-releases](https://github.com/obsidianmd/obsidian-releases).
+
+You can also open the vault in Obsidian with the theme applied and check
+the developer console for CSS warnings.
 
 ## Submitting a pull request
 
