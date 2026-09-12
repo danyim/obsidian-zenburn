@@ -15,7 +15,7 @@
   --bg: #3f3f3f;
   --bg-dark: #1f1f1f;
   --bg-darker: #0f0f0f;
-  --bg-darkest: #000000;
+  --bg-darkest: #000;
   --bg-light: #484848;
   --bg-lighter: #4f4f4f;
 
@@ -91,7 +91,7 @@
   --purple-spell-sp: #bc6c9c;
 
   /* ===== Whites ===== */
-  --white: #ffffff;
+  --white: #fff;
   --white-cream: #dfe4cf;
   --white-warm: #dfdfbf;
   --white-pink: #dccdcc;
@@ -103,7 +103,7 @@
   --bg-search: #284f28;
   --bg-search-inc: #385f38;
   --bg-diff-add: #313c36;
-  --bg-diff-change: #333333;
+  --bg-diff-change: #333;
   --bg-diff-delete: #464646;
   --bg-diff-text: #41363c;
   --bg-error: #3d3535;
@@ -114,7 +114,7 @@
   --bg-pmenu-scroll: #2e3330;
   --bg-pmenu-thumb: #a0afa0;
   --bg-statusline: #313633;
-  --bg-tabline: #222222;
+  --bg-tabline: #222;
   --bg-tabline-fill: #101010;
   --bg-sign: #343434;
   --bg-sign-dark: #181818;
@@ -126,8 +126,8 @@
   --bg-line-nr-dark: #161616;
   --bg-line-nr-subdued: #353535;
   --bg-line-nr-subdued-dark: #1b1b1b;
-  --bg-conceal: #333333;
-  --bg-special-key: #444444;
+  --bg-conceal: #333;
+  --bg-special-key: #444;
 
   /* ===== UI Foregrounds ===== */
   --fg-cursor: #000d18;

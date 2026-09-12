@@ -8,61 +8,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..700&display=swap");
 
 :root {
-  --bg: #333333;
+  --bg: #333;
   --bg-dark: #1f1f1f;
   --bg-darker: #0f0f0f;
-  --bg-darkest: #000000;
+  --bg-darkest: #000;
   --bg-light: #484848;
   --bg-lighter: #4f4f4f;
-
   --black: #3f3f3f;
   --black-bright: #7f7f7f;
-  --black-dim: #333333;
-
+  --black-dim: #333;
   --blue: #c6eaff;
   --blue-bright: #6996bf;
-  --blue-dim: #6699cc;
+  --blue-dim: #69c;
   --blue-light: #8cb0d3;
   --blue-purple: #c0bed1;
-
   --cyan: #8cd0d3;
   --cyan-bright: #9ad6d9;
-  --cyan-dim: #66cccc;
-
+  --cyan-dim: #6cc;
   --green: #7f9f7f;
   --green-bright: #9ece9e;
   --green-dim: #709080;
-
   --magenta: #bc8cbc;
   --magenta-bright: #dcbecd;
-  --magenta-dim: #cc99cc;
-
+  --magenta-dim: #c9c;
   --orange: #ffcfaf;
   --orange-dim: #dfaf8f;
   --orange-light: #ffd7a7;
   --orange-tan: #efdcbc;
   --orange-brown: #cfbfaf;
-
   --red: #dca3a3;
   --red-bright: #ecbcbc;
   --red-dim: #bca3a3;
   --red-dark: #cc9393;
   --red-error: #e37170;
   --red-visual: #f18c96;
-
   --white: #dfe4cf;
   --white-bright: #f8f5ed;
-  --white-dim: #dddddd;
-
+  --white-dim: #ddd;
   --yellow: #e8d7b9; /* Custom, not in zb */
   --yellow-bright: #efef8f;
   --yellow-brighter: #f8f893;
-  --yellow-dim: #ffcc66;
+  --yellow-dim: #fc6;
 }
 
 .theme-dark,
 .theme-dark.is-mobile {
   --mono-rgb-0: 0, 0, 0;
+
   /* --mono-rgb-100: 150, 150, 150; */
   --background-primary: var(--bg);
   --background-primary-alt: var(--bg-dark);
@@ -84,7 +76,7 @@
   --link-color-hover: var(--red-dark);
   --link-external-color: var(--orange);
   --link-external-color-hover: var(--orange-dim);
-  --text-mark: rgba(136, 192, 208, 0.3); /* frost1 */
+  --text-mark: rgb(136 192 208 / 30%); /* frost1 */
   --blockquote-background-color: var(--bg-light);
   --text-highlight-bg: var(--blue-dim);
   --text-highlight-bg-active: var(--blue-dim);
@@ -107,8 +99,8 @@
   --table-row-odd: var(--black-dim);
   --table-hover: var(--black-bright);
   --color-text-weeknum: var(--red-dim);
-
   --list-indent: 1.25em;
+
   /* Headings */
   --h1-size: 2em;
   --h2-size: 1.6em;
@@ -128,11 +120,13 @@
   --h4-weight: 400;
   --h5-weight: 400;
   --h6-weight: 400;
+
   /* Code */
   --pre-code: var(--bg-light);
   --inline-code: var(--green);
   --code-block: var(--green);
   --vim-cursor: var(--cyan);
+
   /* Tags */
   --tag-color: var(--red-visual);
   --tag-color-hover: var(--bg-lighter);
@@ -142,6 +136,7 @@
   --tag-padding-x: 0.5rem;
   --tag-padding-y: 0.25rem;
   --tag-decoration-hover: underline;
+
   /* Specific elements */
   --hr-color: var(--bg-lighter);
   --blockquote-border-color: var(--yellow-dim);
@@ -153,10 +148,10 @@
 
 body {
   --font-text-theme:
-    "Inter Light", -apple-system, BlinkMacSystemFont, Helvetica, Arial,
+    "Inter Light", -apple-system, blinkmacsystemfont, helvetica, arial,
     sans-serif;
   --font-header-text-theme:
-    "Inter Medium", -apple-system, BlinkMacSystemFont, Helvetica, Arial,
+    "Inter Medium", -apple-system, blinkmacsystemfont, helvetica, arial,
     sans-serif;
   --font-monospace-theme:
     "Inconsolata", "Source Code Pro", ui-monospace, monospace;
@@ -175,6 +170,7 @@ body {
 .graph-view.color-line-highlight {
   color: var(--interactive-accent-rgb);
 }
+
 .graph-view.color-text {
   color: var(--text-a-hover);
 }
@@ -193,6 +189,7 @@ ul {
   color: var(--text-faint);
   text-decoration: none;
 }
+
 .cm-formatting-link-string + .cm-url {
   color: var(--blue);
 }
@@ -239,7 +236,7 @@ table {
 
 th {
   font-weight: 700;
-  border: 0px;
+  border: 0;
   border-bottom: 2px solid var(--red);
   text-align: left;
   background-color: var(--table-header);
@@ -247,17 +244,19 @@ th {
 }
 
 td {
-  border-left: 0px;
-  border-right: 0px;
+  border-left: 0;
+  border-right: 0;
   border-bottom: 1px solid var(--background-secondary);
 }
 
 tr:nth-child(even) {
   background-color: var(--table-row-even);
 }
+
 tr:nth-child(odd) {
   background-color: var(--table-row-odd);
 }
+
 tr:hover {
   background-color: var(--table-hover);
 }
@@ -271,6 +270,7 @@ thead {
   padding-right: 4px;
   line-height: 1.1rem;
 }
+
 .cm-s-obsidian .HyperMD-table-row span.cm-inline-code {
   font-size: 100%;
 }
@@ -284,16 +284,13 @@ thead {
   color: var(--text-a);
 }
 
+.nav-file-title {
+  border-radius: 0 0 0 0;
+}
+
 .is-active .nav-file-title {
   color: var(--text-a);
   background-color: var(--background-primary-alt);
-}
-
-.nav-file-title {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 
 .cm-line.HyperMD-list-line {
@@ -324,6 +321,14 @@ thead {
   color: var(--code-block);
 }
 
+.markdown-preview-section code {
+  font-size: 0.9em;
+  color: var(--inline-code);
+  background-color: var(--pre-code);
+  padding: 4px;
+  border-radius: 5px;
+}
+
 .markdown-preview-section pre code {
   font-size: 0.9em;
   background-color: var(--pre-code);
@@ -331,14 +336,6 @@ thead {
   line-height: 1.4em;
   color: var(--code-block);
   display: block;
-}
-
-.markdown-preview-section code {
-  font-size: 0.9em;
-  color: var(--inline-code);
-  background-color: var(--pre-code);
-  padding: 4px;
-  border-radius: 5px;
 }
 
 /* Tables */
@@ -356,28 +353,34 @@ pre.HyperMD-table-row.CodeMirror-line > *,
   background-color: var(--pre-code);
   color: var(--inline-code);
   padding: 4px 6px;
+
   --inline-code-border-radius: 4px;
+
   border-radius: var(--inline-code-border-radius);
 }
+
 /* Inline code tick style */
 .cm-formatting.cm-formatting-code {
   background-color: var(--pre-code);
   color: var(--inline-code);
-  padding: 4px 0px;
+  padding: 4px 0;
   border-radius: var(--inline-code-border-radius);
 }
+
 /* Inline code: opening tick */
 .cm-formatting.cm-formatting-code:nth-of-type(3n + 1) {
   border-radius: 0;
   border-top-left-radius: var(--inline-code-border-radius);
   border-bottom-left-radius: var(--inline-code-border-radius);
 }
+
 /* Inline code: closing tick */
 .cm-formatting.cm-formatting-code:nth-of-type(3n) {
   border-radius: 0;
   border-top-right-radius: var(--inline-code-border-radius);
   border-bottom-right-radius: var(--inline-code-border-radius);
 }
+
 /* Inline code: between ticks */
 .cm-formatting.cm-formatting-code + .cm-inline-code {
   border-radius: 0;
@@ -424,7 +427,7 @@ pre.HyperMD-table-row.CodeMirror-line > *,
 .workspace-split.mod-vertical > .workspace-split,
 .workspace-split.mod-vertical > .workspace-leaf,
 .workspace-tabs {
-  padding-right: 0px;
+  padding-right: 0;
 }
 
 .markdown-embed-title {
@@ -477,7 +480,7 @@ button.mod-cta {
 
 .CodeMirror-cursor {
   background-color: var(--vim-cursor);
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .mermaid .note {
@@ -503,6 +506,7 @@ input[type="text"]::placeholder {
 .cm-gutterElement {
   color: var(--bg-light);
 }
+
 .cm-gutterElement.cm-active {
   color: var(--orange-dim);
 }
