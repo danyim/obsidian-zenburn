@@ -17,4 +17,4 @@ What's Zenburn, you ask? [Well, let me enlighten you.](https://github.com/jnurmi
 Please [open an issue](https://github.com/danyim/obsidian-zenburn/issues) on this repo for any feedback or comments.
 
 
-<a href="https://www.buymeacoffee.com/danyim"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=danyim&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"></a>
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="danyim" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
