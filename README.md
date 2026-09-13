@@ -1,6 +1,6 @@
 # Obsidian Zenburn
 
-![](screenshots/screen.png)
+![](screen.png)
 
 Zenburn, the classic low-contrast vim theme, is now available in Obsidian. Dark mode only.
 
