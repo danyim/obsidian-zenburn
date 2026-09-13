@@ -73,7 +73,7 @@ async function shot(name) {
   // Drop the caret so no line renders as raw markdown, then let layout settle.
   await browser.execute(() => document.activeElement?.blur());
   await browser.pause(500);
-  await browser.saveScreenshot(name);
+  await browser.saveScreenshot(`screenshots/${name}`);
 }
 
 /** Full unclipped height of the note's content, so the window can be sized to show it all. */
