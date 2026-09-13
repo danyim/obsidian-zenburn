@@ -18,6 +18,9 @@ const obsidianOptions = (appVersion, installerVersion) => ({
   appVersion,
   installerVersion,
   themes: ['.'],
+  // Calendar plugin, so thumbnail.png can show a populated right sidebar
+  // like the original hand-captured marketing image did.
+  plugins: [{ id: 'calendar' }],
   vault: './test/vault',
 });
 
@@ -38,8 +41,9 @@ export const config = {
         emulateMobile: true,
       },
       'goog:chromeOptions': {
+        // iPhone 16 Pro: 402x874 logical points at 3x device pixel ratio.
         mobileEmulation: {
-          deviceMetrics: { width: 390, height: 844, pixelRatio: 2 },
+          deviceMetrics: { width: 402, height: 874, pixelRatio: 3 },
         },
       },
     },

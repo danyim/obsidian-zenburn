@@ -76,10 +76,10 @@
   --link-color-hover: var(--red-dark);
   --link-external-color: var(--orange);
   --link-external-color-hover: var(--orange-dim);
-  --text-mark: rgb(136 192 208 / 30%); /* frost1 */
+  --text-mark-fg: var(--black-dim);
   --blockquote-background-color: var(--bg-light);
-  --text-highlight-bg: var(--blue-dim);
-  --text-highlight-bg-active: var(--blue-dim);
+  --text-highlight-bg: var(--yellow-brighter);
+  --text-highlight-bg-active: var(--yellow-dim);
   --interactive-normal: var(--bg-light);
   --interactive-hover: var(--bg-lighter);
   --interactive-accent: var(--yellow-dim);
@@ -179,8 +179,12 @@ body {
   color: var(--text-a-hover);
 }
 
-mark {
-  background-color: var(--text-mark);
+body .markdown-rendered mark,
+body .cm-s-obsidian span.cm-highlight {
+  background-color: var(--text-highlight-bg);
+  color: var(--text-mark-fg);
+  padding: 0 0.15em;
+  border-radius: 3px;
 }
 
 ol,
