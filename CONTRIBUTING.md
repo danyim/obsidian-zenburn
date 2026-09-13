@@ -71,10 +71,12 @@ npm run screenshots
 
 This downloads Obsidian into `.obsidian-cache/` (gitignored) on first run,
 opens `test/vault` with the theme installed, and overwrites the images in
-`screenshots/`. Mobile shots use Obsidian's mobile emulation on the desktop
-app at the iPhone 16 Pro's viewport and pixel ratio, so they are close to
-but not identical to the real iOS app. Edit `test/vault/Kitchen Sink.md` to
-change what gets captured.
+`screenshots/`, plus `thumbnail.png` at the repo root (kept there since it's
+referenced by URL from obsidian-releases' `community-css-themes.json` for
+Obsidian's in-app theme browser). Mobile shots use Obsidian's mobile
+emulation on the desktop app at the iPhone 16 Pro's viewport and pixel
+ratio, so they are close to but not identical to the real iOS app. Edit
+`test/vault/Kitchen Sink.md` to change what gets captured.
 
 ## Submitting a pull request
 
