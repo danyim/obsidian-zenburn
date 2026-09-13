@@ -69,14 +69,16 @@ async function scrollTo(text, { preview = false } = {}) {
   }, text);
 }
 
-// thumbnail.png stays at the repo root (not screenshots/) since it's referenced
-// by a URL registered in obsidian-releases' community-css-themes.json for
-// Obsidian's in-app theme browser.
+// screen.png and thumbnail.png stay at the repo root (not screenshots/) since
+// they're referenced by URL from obsidian-releases' community-css-themes.json
+// for Obsidian's in-app theme browser.
+const ROOT_SHOTS = new Set(['screen.png', 'thumbnail.png']);
+
 async function shot(name) {
   // Drop the caret so no line renders as raw markdown, then let layout settle.
   await browser.execute(() => document.activeElement?.blur());
   await browser.pause(500);
-  const path = name === 'thumbnail.png' ? name : `screenshots/${name}`;
+  const path = ROOT_SHOTS.has(name) ? name : `screenshots/${name}`;
   await browser.saveScreenshot(path);
 }
 
