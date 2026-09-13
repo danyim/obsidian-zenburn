@@ -85,6 +85,20 @@ change what gets captured.
 4. Do not bump the version in `manifest.json`/`versions.json` yourself —
    the maintainer handles releases via `npm run version`.
 
+## Releasing
+
+Maintainer only. `npm version <patch|minor|major>` bumps `package.json`,
+runs `version-bump.mjs` to sync `manifest.json`, `versions.json` and the
+`theme.css` header, and creates a commit and tag. Pushing the tag triggers
+`.github/workflows/release.yml`, which checks the tag matches the manifest
+version, attests provenance, and publishes a GitHub release with
+`manifest.json` and `theme.css` attached:
+
+```
+npm version patch
+git push --follow-tags
+```
+
 ## Reporting issues
 
 If you find a bug or have a suggestion but aren't sure how to fix it,
