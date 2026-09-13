@@ -11,7 +11,12 @@ What's Zenburn, you ask? [Well, let me enlighten you.](https://github.com/jnurmi
 ## Mobile
 | | |
 |---|---|
-| ![](ios.png) | ![](ios-2.png) |
+| ![](mobile.png) | ![](mobile-2.png) |
+
+## Settings
+| Desktop | Mobile |
+|---|---|
+| ![](settings.png) | ![](mobile-settings.png) |
 
 ## Installation
 - Open your **Settings**
