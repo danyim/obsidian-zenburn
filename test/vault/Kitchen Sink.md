@@ -2,7 +2,7 @@
 
 #my-tag #collections #things
 
-[A hyperlink](https://example.com) and a paragraph of text. A **bolded phrase** along with an *italic expression*. Link to [[another doc]]. Raw link: https://google.com
+[A hyperlink](https://example.com) and a paragraph of text. A **bolded phrase** along with an *italic expression* and a ==highlighted phrase==. Link to [[another doc]]. Raw link: https://google.com
 
 ## H2 Heading: Code
 

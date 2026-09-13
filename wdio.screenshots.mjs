@@ -38,8 +38,9 @@ export const config = {
         emulateMobile: true,
       },
       'goog:chromeOptions': {
+        // iPhone 16 Pro: 402x874 logical points at 3x device pixel ratio.
         mobileEmulation: {
-          deviceMetrics: { width: 390, height: 844, pixelRatio: 2 },
+          deviceMetrics: { width: 402, height: 874, pixelRatio: 3 },
         },
       },
     },
