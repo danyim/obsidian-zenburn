@@ -98,6 +98,9 @@
   --table-row-even: var(--black);
   --table-row-odd: var(--black-dim);
   --table-hover: var(--black-bright);
+  --table-border-width: 0;
+  --table-border-color: var(--background-secondary);
+  --table-header-border-color: var(--red);
   --color-text-weeknum: var(--red-dim);
   --list-indent: 1.25em;
 
@@ -125,6 +128,8 @@
   --pre-code: var(--bg-light);
   --inline-code: var(--green);
   --code-block: var(--green);
+  --code-background: var(--pre-code);
+  --code-normal: var(--code-block);
   --vim-cursor: var(--cyan);
 
   /* Tags */
@@ -162,7 +167,6 @@ body {
 .theme-light code[class*="language-"],
 .theme-light pre[class*="language-"] {
   text-shadow: none;
-  background-color: var(--pre-code);
 }
 
 .graph-view.color-circle,
@@ -210,13 +214,8 @@ ul {
   color: var(--text-a);
 }
 
-.HyperMD-codeblock-bg {
-  background-color: var(--pre-code);
-}
-
 .HyperMD-codeblock {
   line-height: 1.4em;
-  color: var(--code-block);
 }
 
 .HyperMD-codeblock-begin {
@@ -234,19 +233,16 @@ table {
   border-collapse: collapse;
 }
 
-th {
+.markdown-rendered th {
   font-weight: 700;
-  border: 0;
-  border-bottom: 2px solid var(--red);
+  border-bottom-width: 2px;
   text-align: left;
   background-color: var(--table-header);
   color: var(--red-bright);
 }
 
-td {
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 1px solid var(--background-secondary);
+.markdown-rendered td {
+  border-bottom-width: 1px;
 }
 
 tr:nth-child(even) {
@@ -315,26 +311,20 @@ thead {
 
 .markdown-rendered code {
   font-size: 0.9em;
-  background-color: var(--pre-code);
   padding: 4px;
   line-height: 1.4em;
-  color: var(--code-block);
 }
 
 .markdown-preview-section code {
   font-size: 0.9em;
-  color: var(--inline-code);
-  background-color: var(--pre-code);
   padding: 4px;
   border-radius: 5px;
 }
 
 .markdown-preview-section pre code {
   font-size: 0.9em;
-  background-color: var(--pre-code);
   padding: 16px;
   line-height: 1.4em;
-  color: var(--code-block);
   display: block;
 }
 
@@ -350,8 +340,6 @@ pre.HyperMD-table-row.CodeMirror-line > *,
 }
 
 .cm-inline-code:not(.cm-formatting-code) {
-  background-color: var(--pre-code);
-  color: var(--inline-code);
   padding: 4px 6px;
 
   --inline-code-border-radius: 4px;
@@ -361,8 +349,6 @@ pre.HyperMD-table-row.CodeMirror-line > *,
 
 /* Inline code tick style */
 .cm-formatting.cm-formatting-code {
-  background-color: var(--pre-code);
-  color: var(--inline-code);
   padding: 4px 0;
   border-radius: var(--inline-code-border-radius);
 }
