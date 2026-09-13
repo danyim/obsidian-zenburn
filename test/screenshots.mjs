@@ -158,15 +158,23 @@ describe('README screenshots', function () {
     }, uiWidth);
     await shot('ui.png');
 
-    // thumbnail.png: the three-pane layout (file explorer, note, backlinks)
-    // used as the marketing image. The original was hand-captured from a
-    // real, richly-populated vault with a calendar plugin in the right
-    // sidebar — this minimal test vault can't reproduce that content, so
-    // this is a best-effort approximation using what's actually here.
+    // thumbnail.png: the three-pane layout (file explorer, note, backlinks +
+    // calendar) used as the marketing image. The original was hand-captured
+    // from a real, richly-populated vault — this minimal test vault can't
+    // reproduce the file tree or journal content, so this is a best-effort
+    // approximation using what's actually here, with the Calendar community
+    // plugin (installed via wdio.screenshots.mjs) stacked below Backlinks
+    // to match the original's bottom-right calendar panel.
     await browser.executeObsidian(({ app }) => {
       app.workspace.rightSplit?.expand?.();
       const backlinks = app.workspace.getLeavesOfType('backlink')[0];
       if (backlinks) app.workspace.revealLeaf(backlinks);
+    });
+    await browser.pause(300);
+    await browser.executeObsidian(async ({ app }) => {
+      const backlinks = app.workspace.getLeavesOfType('backlink')[0];
+      const calendar = app.workspace.createLeafBySplit(backlinks, 'horizontal', false);
+      await calendar.setViewState({ type: 'calendar' });
     });
     await browser.pause(300);
     const rightSidebarWidth = await browser.execute(() => {

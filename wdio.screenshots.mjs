@@ -18,6 +18,9 @@ const obsidianOptions = (appVersion, installerVersion) => ({
   appVersion,
   installerVersion,
   themes: ['.'],
+  // Calendar plugin, so thumbnail.png can show a populated right sidebar
+  // like the original hand-captured marketing image did.
+  plugins: [{ id: 'calendar' }],
   vault: './test/vault',
 });
 
