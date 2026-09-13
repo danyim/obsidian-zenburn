@@ -188,12 +188,6 @@ ul {
   margin: 0.25rem 0;
 }
 
-/** Ensures the format string after links have a different color */
-.cm-formatting-link-string {
-  color: var(--text-faint);
-  text-decoration: none;
-}
-
 .cm-formatting-link-string + .cm-url {
   color: var(--blue);
 }
