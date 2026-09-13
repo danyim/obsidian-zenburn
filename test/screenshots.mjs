@@ -2,8 +2,8 @@
  * Regenerates the README screenshots from a real Obsidian render of
  * test/vault, so the README always shows what the current theme.css actually
  * produces. Runs once per capability: desktop writes screen.png (the full
- * Kitchen Sink note) and ui.png and settings.png, mobile emulation writes
- * mobile*.png.
+ * Kitchen Sink note), ui.png, thumbnail.png, and settings.png; mobile
+ * emulation writes mobile*.png.
  */
 import { browser } from '@wdio/globals';
 
@@ -20,22 +20,46 @@ async function forceDarkMode() {
   });
 }
 
-async function openNote() {
-  await browser.executeObsidian(async ({ app, obsidian }) => {
-    const file = app.vault.getAbstractFileByPath('Kitchen Sink.md');
-    if (!(file instanceof obsidian.TFile)) throw new Error('Kitchen Sink.md missing');
-    await app.workspace.getLeaf(false).openFile(file);
-  });
-  await browser.$('.markdown-source-view .cm-line').waitForExist();
+/**
+ * Opens the Kitchen Sink note. `preview: true` switches to reading view,
+ * used for mobile — Obsidian's mobile *editing* view boosts editor text to
+ * 1.618x the configured font size for touch legibility, which reads as
+ * badly over-zoomed in a screenshot; reading view uses the plain size and
+ * is also the more realistic "someone browsing a note on their phone" shot.
+ */
+async function openNote({ preview = false } = {}) {
+  await browser.executeObsidian(
+    async ({ app, obsidian }, preview) => {
+      const file = app.vault.getAbstractFileByPath('Kitchen Sink.md');
+      if (!(file instanceof obsidian.TFile)) throw new Error('Kitchen Sink.md missing');
+      const leaf = app.workspace.getLeaf(false);
+      await leaf.openFile(file);
+      if (preview) await leaf.setViewState({ type: 'markdown', state: { mode: 'preview' } });
+    },
+    preview
+  );
+  await browser.$(preview ? '.markdown-rendered' : '.markdown-source-view .cm-line').waitForExist();
 }
 
 /**
- * Scroll the editor so the line containing `text` is at the top. Goes
- * through the editor API rather than searching rendered `.cm-line` elements,
- * since CodeMirror only renders lines near the current viewport — a target
- * further down the note wouldn't exist in the DOM yet to search for.
+ * Scroll so the heading (or line) containing `text` is at the top.
+ *
+ * In source view this goes through the editor API rather than searching
+ * rendered `.cm-line` elements, since CodeMirror only renders lines near the
+ * current viewport — a target further down the note wouldn't exist in the
+ * DOM yet to search for. Reading view isn't virtualized like that for a note
+ * this short, so headings can be searched for directly.
  */
-async function scrollTo(text) {
+async function scrollTo(text, { preview = false } = {}) {
+  if (preview) {
+    await browser.execute((needle) => {
+      const heading = [...document.querySelectorAll('.markdown-preview-view :is(h1, h2, h3, h4, h5, h6)')].find(
+        (el) => el.textContent.includes(needle)
+      );
+      heading?.scrollIntoView({ block: 'start' });
+    }, text);
+    return;
+  }
   await browser.executeObsidian(({ app }, needle) => {
     const editor = app.workspace.activeEditor?.editor;
     const line = editor?.getValue().split('\n').findIndex((l) => l.includes(needle));
@@ -102,9 +126,9 @@ describe('README screenshots', function () {
     await forceDarkMode();
 
     if (mobile) {
-      await openNote();
+      await openNote({ preview: true });
       await shot('mobile.png');
-      await scrollTo('H5 Heading: Tables');
+      await scrollTo('H5 Heading: Tables', { preview: true });
       await shot('mobile-2.png');
       await openSettings();
       await shot('mobile-settings.png');
@@ -133,6 +157,29 @@ describe('README screenshots', function () {
       window.electron.remote.getCurrentWindow().setSize(width, 1100);
     }, uiWidth);
     await shot('ui.png');
+
+    // thumbnail.png: the three-pane layout (file explorer, note, backlinks)
+    // used as the marketing image. The original was hand-captured from a
+    // real, richly-populated vault with a calendar plugin in the right
+    // sidebar — this minimal test vault can't reproduce that content, so
+    // this is a best-effort approximation using what's actually here.
+    await browser.executeObsidian(({ app }) => {
+      app.workspace.rightSplit?.expand?.();
+      const backlinks = app.workspace.getLeavesOfType('backlink')[0];
+      if (backlinks) app.workspace.revealLeaf(backlinks);
+    });
+    await browser.pause(300);
+    const rightSidebarWidth = await browser.execute(() => {
+      const right = document.querySelector('.mod-right-split');
+      return right ? Math.ceil(right.getBoundingClientRect().width) : 300;
+    });
+    await browser.executeObsidian((_, width) => {
+      window.electron.remote.getCurrentWindow().setSize(width, 1100);
+    }, uiWidth + rightSidebarWidth);
+    await shot('thumbnail.png');
+    await browser.executeObsidian(({ app }) => {
+      app.workspace.rightSplit?.collapse?.();
+    });
 
     await openSettings();
     await shot('settings.png');
