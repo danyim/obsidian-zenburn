@@ -83,7 +83,14 @@
   --interactive-normal: var(--bg-light);
   --interactive-hover: var(--bg-lighter);
   --interactive-accent: var(--yellow-dim);
+  --interactive-accent-hover: var(--yellow);
   --interactive-before: var(--yellow);
+
+  /* Obsidian derives --color-accent-* (and anything not overridden above)
+     from these; without them the default purple accent leaks through. */
+  --accent-h: 40;
+  --accent-s: 100%;
+  --accent-l: 70%;
   --background-modifier-border: var(--red);
   --background-modifier-error: var(--red-error);
   --text-accent: var(--red-dim);
@@ -453,9 +460,16 @@ button.mod-cta {
   font-weight: 700;
 }
 
-.mod-cta:hover {
-  background-color: var(--interactive-before);
-  font-weight: 700;
+/* Settings search and block links briefly flash the matched element.
+   Obsidian paints it with --text-highlight-bg, which is opaque here and
+   pairs badly with the untouched --text-normal, so redefine it on the
+   flashing element as a translucent accent tint that keeps text readable. */
+.is-flashing {
+  --text-highlight-bg: color-mix(
+    in srgb,
+    var(--interactive-accent) 35%,
+    transparent
+  );
 }
 
 .community-theme.is-selected button {
